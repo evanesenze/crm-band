@@ -1,13 +1,251 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root{
+  height: 100%;
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper{
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+.content{
+  background-color: aquamarine;
+  height: 100%;
+  max-width: 600px;
+  min-width: 300px;
+  width: 60%;
+}
+
+/*Header*/
+header {
+  width: 100%;
+  height: 10%;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.user-image{
+  height: 70%;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/*Main*/
+.select-platform{
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-frame{
+  width: 100%;
+  height: 95%;
+  overflow-y: auto;
+}
+
+.bread{
+  --bs-breadcrumb-divider: '>';
+  height: 5%;
+  padding: 5px;
+  border-bottom: black 1px solid;
+}
+
+.breadcrumb{
+  margin:0 !important;
+
+}
+
+.chat-component{
+  height: 95%;
+  padding: 0;
+}
+
+
+.chat-history{
+  height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chat-history ul{
+  padding: 0;
+  margin: 0;
+}
+
+.chat-history ul li {
+  padding-bottom: 10px;
+}
+
+.message-item{
+  /*width: 100%;*/
+  word-wrap: break-word;
+  margin-left: 3%;
+}
+
+.breadcrumb-item{
+  font-size: smaller;
+  padding: 0 !important;
+  max-width: 20%;
+} 
+
+.breadcrumb-item:not(.platform){
+  width: auto;
+  max-width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-input{
+  height: 20%;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.chat-input .submit-btn{
+  display: inline-block;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area{
+  height: 100%;
+  width: 70%;
+  padding: 5px;
+}
+
+.input-area textarea{
+  resize: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.main {
+  width: 100%;
+  height: 80%;
+  background-color: brown;
+}
+
+.login-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.login-wrapper div{
+  width: 100px;
+  height: 100px;
+  background-color: sienna;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.login-wrapper div button {
+  width: 70px;
+  height: 25px;
+  text-transform: uppercase;
+}
+
+.main ul{
+  list-style: none;
+}
+
+.main li{
+  padding: 2px;
+  cursor: pointer;
+}
+/*Footer*/
+.footer-nav{
+  height: 10%;
+}
+
+
+
+
+
+footer{
+  width: 100%;
+  height: 10%;
+  background-color:tomato;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tabButton{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tabButton svg {
+  width: 40%;
+}
+
+.tabButton:hover:not(.active) svg{
+  stroke: aqua;
+  stroke-width: 2px;
+}
+
+.tabButton:hover:not(.active) .tabName{
+  text-shadow: 
+    1px 0 1px aqua,
+    0 1px 1px aqua,
+    -1px 0 1px aqua,
+    0 1px 1px aqua;
+}
+
+.active svg{
+  fill: #fff;
+}
+
+
+@media (max-width: 600px){
+
+  body{
+    font-size: .7em;
+  }
+
+}
+
+@media (min-width: 600px){
+
+  body{
+    font-size: 1em;
+  }
+
+}
+
