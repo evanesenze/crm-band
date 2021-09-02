@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 html, body, #root{
@@ -78,7 +78,7 @@ header {
 }
 
 .chat-component{
-  height: 95%;
+  height: 100%;
   padding: 0;
 }
 
@@ -156,6 +156,11 @@ header {
   background-color: brown;
 }
 
+.page-content{
+  overflow-y: auto;
+  height: 95%;
+}
+
 .login-wrapper{
   display: flex;
   align-items: center;
@@ -204,7 +209,7 @@ footer{
 }
 
 .tabButton{
-  width: auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
